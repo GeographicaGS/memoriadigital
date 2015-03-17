@@ -107,12 +107,12 @@ function drawChart(response,options){
 	chart.draw(data, options);
 	$("#greeBoxPlan").text(data.getValue(pos,0));
 	var inversion = data.getValue(pos,1).toString().split(".")[0];
-	$("#greeBoxValue").text(addCommas(inversion));
+	$("#greeBoxValue").text(addCommas(inversion) + " €");
 	$("#greeBoxPer").text((data.getValue(pos,1)/total * 100).toString().split(".")[0] + " %");
 	$(".greeBox").css({"background-color":options.colors[pos]})
 	$(".greeBox .arrow-left").css({"border-right":"10px solid " + options.colors[pos]})
 	$(".greeBox").show();
-	$($("#ceterChartText span")[0]).text(addCommas(total.toString().split(".")[0]) + " €");
+	$($("#ceterChartText span")[0]).text(addCommas(total.toString().split(".")[0]));
 	$("#ceterChartText").show();
 }
 
