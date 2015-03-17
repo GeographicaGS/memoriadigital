@@ -112,7 +112,7 @@ function drawChart(response,options){
 	$(".greeBox").css({"background-color":options.colors[pos]})
 	$(".greeBox .arrow-left").css({"border-right":"10px solid " + options.colors[pos]})
 	$(".greeBox").show();
-	$($("#ceterChartText span")[0]).text(addCommas(total.toString().split(".")[0]));
+	$($("#ceterChartText span")[0]).text(addCommas(total.toString().split(".")[0]) + " €");
 	$("#ceterChartText").show();
 }
 
