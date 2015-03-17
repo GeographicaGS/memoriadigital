@@ -1,0 +1,131 @@
+@import 'reset';
+@import 'base';
+
+@font-face {
+    font-family: 'museo_slab500';
+    src: url('fonts/Museo_Slab_500-webfont.eot');
+    src: url('fonts/Museo_Slab_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Museo_Slab_500-webfont.woff2') format('woff2'),
+         url('fonts/Museo_Slab_500-webfont.woff') format('woff'),
+         url('fonts/Museo_Slab_500-webfont.ttf') format('truetype'),
+         url('fonts/Museo_Slab_500-webfont.svg#museo_slab500') format('svg');
+    
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'museo_slab500';
+    src: url('fonts/Museo_Slab_500italic-webfont.eot');
+    src: url('fonts/Museo_Slab_500italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Museo_Slab_500italic-webfont.woff2') format('woff2'),
+         url('fonts/Museo_Slab_500italic-webfont.woff') format('woff'),
+         url('fonts/Museo_Slab_500italic-webfont.ttf') format('truetype'),
+         url('fonts/Museo_Slab_500italic-webfont.svg#museo_slab500_italic') format('svg');
+    
+    font-weight: 500;
+    font-style: italic;
+
+}
+
+body {
+	font: 18px "Open Sans", sans-serif;
+	background-color: #f2f2f2;	
+
+    .title{
+        font-size: 14px;
+        color:#989898;
+        font-weight: 700;
+        border-top: 1px solid #989798;
+        text-transform: uppercase;
+      }
+
+      input[type="text"]{
+        background-color: #fff;
+        color:#57575f;
+        font-size: 18px;
+        height: 44px;
+        text-align: center;
+        border: none;
+        border-bottom: 1px solid #ccccce;
+        background-image: url("../images/MxM_ico_buscador-2x.png");
+        background-repeat: no-repeat;
+        background-size: 24px;
+        background-position: 98%;
+        font-weight: 300;
+        font-family:"Open Sans", sans-serif;
+
+        @media (min-height:900px) {
+            margin-top: 40px;
+        }
+
+        &::-webkit-input-placeholder{
+            color:#57575f;
+            font-weight: 300;
+        }
+        &::-moz-placeholder{
+            color:#57575f;
+            font-weight: 300;
+        }
+        &:-moz-placeholder{
+            color:#57575f;
+            font-weight: 300;
+        }
+        &:-ms-input-placeholder{
+            color:#57575f;
+            font-weight: 300;
+        }
+    }
+
+    .box{
+        border: 2px solid #39ae99;
+        width: 298px;
+        margin-left: 50px;
+        background-color: #fff;
+        font-family: museo_slab500;
+        span{
+          color:#39ae99;
+          font-weight: 500;
+          display: block;
+          text-align: right;
+          padding-right: 16px;
+          &:first-of-type{
+            font-size: 18px;
+            line-height: 24px;
+            margin-top: 20px;
+          }
+          &:nth-of-type(2){
+            font-family: "Open Sans", sans-serif;
+          }
+          &:nth-of-type(3){
+            font-size: 36px;
+            padding-bottom: 30px;
+          }
+        }
+        .separator{
+          width: ~"calc(100% - 32px)";
+          height: 2px;
+          margin-left: 16px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          background-color: #39ae99;
+        }
+    }
+}
+
+.ellipsis{
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+}
+
+@import 'home';
+@import 'menu';
+@import 'footer';
+@import 'programs';
+@import 'towns';
+@import 'town';

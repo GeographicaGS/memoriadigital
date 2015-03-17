@@ -1,0 +1,101 @@
+extends layout
+
+block content
+	div(id="town")
+		div(class="container")
+			div(class="row")
+				div(class="col-sm-12 col-md-12")
+					div(class="fright")
+						div(class="box mt50")
+							span INVERSIÓN DE DIPUTACIÓN</br>
+							span(class="anio") 2011-2015
+							div(class="separator")
+							span()= town.total + " €"
+							span(class="total")= "Total en " + town.etiqueta
+						input(type="text" placeholder="busca tu municipio")
+					div(class="mb20")
+						span(class="title") Municipios
+					div(class="heraldica")
+						img(src="../images/heraldica/" + town.heraldica)
+					h1()= town.etiqueta
+					h2()= town.lema
+					h3()= town.descripcion
+					
+					div(class="row chartSection")
+						div(class="col-sm-12 col-md-12 filter")
+							span Filtra por programas:
+							div(class="peopleFilter active")
+							div(class="townFilter")
+						
+						div(class="col-sm-4 col-md-4")
+							div(class="legend peopleLegend active")
+								h4 Con las Personas
+								h5()= "en " + town.etiqueta
+
+								h6 Con la calidad de vida
+								span(class="color1") Plan/Programa/Medidas: Agua y Residuos
+								span(class="color2") Espacios Verdes y Naturaleza
+								span(class="color3") Energía y Alumbrado
+								span(class="color4") Plan de Bomberos
+								span(class="color5") Plan Provincial de Cohesión Territorial
+								span(class="color6") Plan de Urgencia Municipal 2011-2014
+
+
+								h6 Con el desarrollo personal
+								span(class="color7") Infraestructuras Deportivas
+								span(class="color8") Planes de Ciudadanía
+								span(class="color9") Planes de Juventud
+								span(class="color10") Planes Culturales
+								span(class="color11") Programas y Planes Deportivos
+
+							div(class="legend townLegend")
+								h4 Con los Municipios
+								h5()= "en " + town.etiqueta
+								
+								h6 Fondos Reintegrables
+								span(class="color12") Fondos Reintegrables
+
+								h6 Con el Empleo
+								span(class="color13") FEDER
+								span(class="color14") ProEmpleo III y IV
+								span(class="color15") Turismo
+								span(class="color16") Conoce la Provincia
+								span(class="color17") Turismo Promoción y Marketing
+
+
+								h6 Mejorando el Municipio
+								span(class="color18") Programas Provinciales Plurianuales
+								span(class="color19") Programa de Fomento de Empleo Agrario y Rural
+								span(class="color20") Supera
+								span(class="color21") Viviendas y Colegios (Sevilla Activa)
+
+							div(class="legend programLegend")
+								h4 Más con menos
+								h5()= "en " + town.etiqueta
+
+								h6 Con las Personas
+								span(class="color22") Con la calidad de vida
+								span(class="color23") Con el desarrollo personal
+
+								h6 Con los Ayuntamientos
+								span(class="color24") Fondos Reintegrables
+								span(class="color25") Con el Empleo
+								span(class="color26") Mejorando el Municipio
+						
+						div(class="col-sm-4 col-md-4")
+							div(id="chart")
+							div(id="ceterChartText") 
+								span
+								span &nbsp;€
+
+						div(class="col-sm-4 col-md-4")
+							div(class="greeBox")
+								span MAYOR INVERSIÓN
+								span(id="greeBoxPlan") 
+								span(id="greeBoxValue")
+								span(id="greeBoxPer")
+
+								div(class="arrow-left")
+	block js
+		script.
+			new Town().onReady();

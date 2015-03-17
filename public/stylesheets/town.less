@@ -1,0 +1,345 @@
+#town{
+	margin-top: 50px;
+	input[type="text"]{
+		width: 298px;
+		margin-left: 50px;
+		margin-top: 20px;
+	}
+
+	.title{
+		margin-top: 50px;
+	}
+
+	h1{
+		font-family: museo_slab500;
+		font-size: 72px;
+		color:#39ae99;
+		line-height: 72px;
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+
+	h2{
+		font-size: 30px;
+		color: #6e8158;
+		font-weight: 400;
+		line-height: 36px;
+		margin-top: 10px;
+	}
+
+	h3{
+		font-size: 24px;
+		color: #6e8158;
+		line-height: 30px;
+		font-weight: 300;
+		margin-top: 48px;
+	}
+	
+	.box{
+		span{
+			&:nth-of-type(3){
+				padding-bottom: 0;
+			}
+			&:nth-of-type(4){
+				padding-bottom: 30px;
+			}
+		}
+	}
+
+	.heraldica{
+		width: 100px;
+		height: 100px;
+		border-radius: 100%;
+		border:1px solid #e7e7e7;
+		background-color: #fff;
+		float: left;
+		margin-right: 50px;
+		img{
+			display: block;
+  			margin: 0 auto;
+  			height: 90px;
+  			padding-top: 10px;
+		}
+	}
+	.chartSection{
+		margin-top: 68px;
+		margin-bottom: 190px;
+		.filter{
+			overflow: auto;
+			span{
+				display: block;
+				font-size: 14px;
+				color:#5d5b5c;
+				margin-bottom: 8px;
+			}
+			.peopleFilter, .townFilter{
+				width: 48px;
+				height: 48px;
+				background-size: cover;
+				cursor: pointer;
+				float: left;
+			}
+			.peopleFilter{
+				&.active{
+					background-image: url("../images/MxM_selector_personas-g-2x.png");
+				}
+				background-image: url("../images/MxM_selector_personas-off-2x.png");
+				margin-right: 10px;
+			}
+			.townFilter{
+				background-image: url("../images/MxM_selector_ayuntamientos-off-2x.png");
+				&.active{
+					background-image: url("../images/MxM_selector_ayuntamientos-g-2x.png");
+				}
+			}
+		}
+		.legend{
+			margin-top: 40px;
+			h4{
+				font-family: museo_slab500;
+				font-size: 30px;
+				color:#39ae99;
+				font-weight: 500;
+			}
+			h5{
+				font-family: museo_slab500;
+				font-size: 18px;
+				color:#39ae99;
+				font-weight: 500;
+			}
+			h6{
+				color:#39ae99;
+				font-weight: 700;
+				font-size: 14px;
+				margin-top: 30px;
+				line-height: 22px;
+			}
+			span{
+				font-size: 14px;
+				color: #3d3b3c;
+				display: block;
+				line-height: 22px;
+
+				&:before{
+					content: "";
+					width: 8px;
+					height: 8px;
+					border-radius: 100%;
+					margin-top: 7px;
+					display: block;
+					float: left;
+					margin-right: 8px;
+				}
+				&.color1{
+					&:before{
+						background-color: #5da5da;
+					}
+				}
+				&.color2{
+					&:before{
+						background-color: #32a260;
+					}
+				}
+				&.color3{
+					&:before{
+						background-color: #f9a339;
+					}
+				}
+				&.color4{
+					&:before{
+						background-color: #f25854;
+					}
+				}
+				&.color5{
+					&:before{
+						background-color: #b2912f;
+					}
+				}
+				&.color6{
+					&:before{
+						background-color: #b276b3;
+					}
+				}
+				&.color7{
+					&:before{
+						background-color: #4584b3;
+					}
+				}
+				&.color8{
+					&:before{
+						background-color: #cccc33;
+					}
+				}
+				&.color9{
+					&:before{
+						background-color: #d785aa;
+					}
+				}
+				&.color10{
+					&:before{
+						background-color: #404d40;
+					}
+				}
+				&.color11{
+					&:before{
+						background-color: #404d40;
+					}
+				}
+				&.color12{
+					&:before{
+						background-color: #0c783d;
+					}
+				}
+				&.color13{
+					&:before{
+						background-color: #2b59a6;
+					}
+				}
+				&.color14{
+					&:before{
+						background-color: #d4005b;
+					}
+				}
+				&.color15{
+					&:before{
+						background-color: #e5ad2f;
+					}
+				}
+				&.color16{
+					&:before{
+						background-color: #4a664b;
+					}
+				}
+				&.color17{
+					&:before{
+						background-color: #ff6699;
+					}
+				}
+				&.color18{
+					&:before{
+						background-color: #7ab51d;
+					}
+				}
+				&.color19{
+					&:before{
+						background-color: #ca7e33;
+					}
+				}
+				&.color20{
+					&:before{
+						background-color: #e54742;
+					}
+				}
+				&.color21{
+					&:before{
+						background-color: #8d77b3;
+					}
+				}
+				&.color22{
+					&:before{
+						background-color: #279881;
+					}
+				}
+				&.color23{
+					&:before{
+						background-color: #30a38d;
+					}
+				}
+				&.color24{
+					&:before{
+						background-color: #39ae99;
+					}
+				}
+				&.color25{
+					&:before{
+						background-color: #57baa8;
+					}
+				}
+				&.color26{
+					&:before{
+						background-color: #75c6b8;
+					}
+				}
+
+			}
+
+			&.townLegend, &.programLegend, &.peopleLegend{
+				display: none;
+				&.active{
+					display: block;
+				}
+			}
+		}
+		#chart{
+			margin-top: 40px;
+		  	width: 100%;
+		  	height: 420px;
+		  	overflow: hidden;
+		}
+
+		.greeBox{
+			background-color: #138137;
+			border-radius: 3px;
+			max-width: 300px;
+			margin-top: 100px;
+			float: right;
+			display: none;
+			position: relative;
+
+			.arrow-left {
+			  width: 0px;
+			  height: 0px;
+			  border-top: 10px solid transparent;
+			  border-bottom: 10px solid transparent;
+			  position: absolute;
+			  top: ~"calc(50% - 5px)";
+			  left: -10px;
+			}
+			span{
+				color:#fff;
+				display: block;
+				text-align: right;
+				padding-right: 20px;
+				padding-left: 20px;
+				&:nth-of-type(1){
+					font-size: 14px;
+					line-height: 24px;
+					padding-top: 22px;
+				}
+				&:nth-of-type(2){
+					font-size: 18px;
+					line-height: 22px;
+					font-weight: 700;
+				}
+				&:nth-of-type(3){
+					font-size: 36px;
+					line-height: 36px;
+					font-weight: 300;
+					padding-top: 28px;
+				}
+				&:nth-of-type(4){
+					font-size: 18px;
+					line-height: 24px;
+					padding-bottom: 30px;
+				}
+			}
+		}
+
+		#ceterChartText{
+			display: none;
+			span{
+				&:nth-of-type(1){
+					font-weight: 600;
+				}
+			}
+			font-size: 36px;
+			color: #39ae99;
+			position: absolute;
+			top: 198px;
+			font-weight: 300;
+			width: 100%;
+			text-align: center;
+			padding-right: 20px;
+		}
+	}
+}

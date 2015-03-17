@@ -1,0 +1,201 @@
+extends layout
+
+block content
+	div(id="programs")
+		div(class="container")
+			div(class="row")
+				div(class="col-sm-12 col-md-12")
+					div(class="fright")
+						div(class="box mt50")
+							span INVERSIÓN DE DIPUTACIÓN</br>
+							span(class="anio") 2011-2015
+							div(class="separator")
+							- var total;
+							if people
+								- total = parseNumber(people.totalcalidad + people.totalpersonal, 1);
+							else
+								- total = parseNumber(towns.total_empleo + towns.reintegrables + towns.total_mejorando_municipio)
+							span()= total.substring(0,total.indexOf(',')) + " €"
+						input(type="text" placeholder="busca tu municipio")
+
+					span(class="title") Programa
+					h1()= titleH1
+					p 4 años pensando en las personas, en su bienestar y sed in mi ultrices, fermentum lectus amet neque nec dapibus. Praesent elementum felis et sapien lobortis, at dictum nisi mattis. Pellentesque lectus sapien. Mauris sodales urna at scelerisque varius.
+
+			if people
+				div(class="row tableHeader")
+					div(class="col-sm-3 col-md-3")
+						span <strong>SUBPROGRAMAS</strong>
+
+					div(class="col-sm-6 col-md-6")
+						span PLANES
+
+					div(class="col-sm-3 col-md-3 frigh")
+						span INVERSIÓN DE DIPUTACIÓN €
+
+				div(class="row subprogram")
+					div(class="col-sm-3 col-md-3")
+						span Con la Calidad de Vida
+					div(class="col-sm-9 col-md-9")
+						span()= parseNumber(people.totalcalidad,2)
+
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Plan/Programa/Medidas: Agua y Residuos
+						span()= parseNumber(people.aguas)
+				
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Espacios Verdes y Naturaleza
+						span()= parseNumber(people.verde)
+				
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Energía y Alumbrado 
+						span()= parseNumber(people.energia)
+
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Plan de Bomberos
+						span()= parseNumber(people.bomberos)
+
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Plan Provincial de Cohesión Territorial
+						span()= parseNumber(people.cohesion)
+
+				div(class="row lastRow")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Plan de Urgencia Municipal 2011-2014
+						span()= parseNumber(people.urgencia)
+
+
+				div(class="row subprogram")
+					div(class="col-sm-3 col-md-3")
+						span Con el desarrollo personal
+					div(class="col-sm-9 col-md-9")
+						span()= parseNumber(people.totalpersonal)
+
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Infraestructuras Deportivas
+						span()= parseNumber(people.deportivas)
+
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Planes de Ciudadanía
+						span()= parseNumber(people.ciudadania)
+				
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Planes de Juventud
+						span()= parseNumber(people.juventud)
+				
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Planes Culturales
+						span()= parseNumber(people.culturales)
+
+				div(class="row lastRow")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Programas y Planes Deportivos
+						span()= parseNumber(people.deportivos)
+
+				div(class="row result")
+					div(class="col-sm-12 col-md-12")
+						span Con las Personas
+						span()= parseNumber(people.totalcalidad + people.totalpersonal)
+
+				div(class="row")
+					div(class="col-sm-12 col-md-12")
+						span(class="note") Los datos incluyen inversiones de adjudicación comarcal que tienen efecto directo en cada municipio de la zona.
+
+
+
+			if towns
+				div(class="row tableHeader")
+					div(class="col-sm-3 col-md-3")
+						span <strong>SUBPROGRAMAS</strong>
+
+					div(class="col-sm-6 col-md-6")
+						span PLANES
+
+					div(class="col-sm-3 col-md-3 frigh")
+						span INVERSIÓN DE DIPUTACIÓN €
+
+				div(class="row subprogram")
+					div(class="col-sm-3 col-md-3")
+						span Fondos Reintegrables
+					div(class="col-sm-9 col-md-9")
+						span()= parseNumber(towns.reintegrables)
+
+				div(class="row lastRow")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Fondos Reintegrables
+						span()= parseNumber(towns.reintegrables)
+
+				div(class="row subprogram")
+					div(class="col-sm-3 col-md-3")
+						span Con el Empleo
+					div(class="col-sm-9 col-md-9")
+						span()= parseNumber(towns.total_empleo)
+
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span FEDER
+						span()= parseNumber(towns.feder)
+				
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span ProEmpleo III y IV
+						span()= parseNumber(towns.proempleo)
+				
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Turismo
+						span()= parseNumber(towns.turismo)
+
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Conoce la Provincia
+						span()= parseNumber(towns.conoce)
+
+				div(class="row lastRow")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Turismo Promoción y Marketing
+						span()= parseNumber(towns.marketing)
+
+				div(class="row subprogram")
+					div(class="col-sm-3 col-md-3")
+						span Mejorando el Municipio
+					div(class="col-sm-9 col-md-9")
+						span()= parseNumber(towns.total_mejorando_municipio)
+
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Programas Provinciales Plurianuales
+						span()= parseNumber(towns.plurianuales)
+
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Programa de Fomento de Empleo Agrario y Rural
+						span()= parseNumber(towns.pfoea)
+				
+				div(class="row")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Supera
+						span()= parseNumber(towns.supera)
+				
+				div(class="row lastRow")
+					div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+						span Viviendas y Colegios (Sevilla Activa)
+						span()= parseNumber(towns.sevilla)
+
+				div(class="row result")
+					div(class="col-sm-12 col-md-12")
+						span Con los Municipios
+						span()= parseNumber(towns.total_empleo + towns.reintegrables + towns.total_mejorando_municipio)
+
+				div(class="row")
+					div(class="col-sm-12 col-md-12")
+						span(class="note") Los datos incluyen inversiones de adjudicación comarcal que tienen efecto directo en cada municipio de la zona.

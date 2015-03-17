@@ -1,0 +1,98 @@
+extends layout
+
+block content
+	div(id="home")
+		nav
+			li
+				a(href="") PRESENTACIÓN
+			li
+				a(href="") PROGRAMAS
+			li
+				a(href="/municipios") MUNICIPIOS
+			li
+				a(href="") VIDEOS
+
+		div(class="container")
+			div(class="row")
+				div(class="col-sm-12 col-md-12")
+					figure
+						img(src="../images/MxM_logos64-2x.png")
+						figcaption Inversiones y coberturas sociales de la </br> 
+							strong Diputación de Sevilla <br>
+							span 2011–2015
+
+					h1 MÁS CON MENOS
+					
+					div(class="selector")
+						h2
+							a(href="/con-las-personas")
+								figure
+									img(src="../images/MxM_ico_personas-2x.png")
+									figcaption con las<br> Personas
+
+						span(class="separator") consulta Programas
+
+						h2
+							a(href="/con-los-municipios")
+								figure
+									img(src="../images/MxM_ico_ayuntamientos-2x.png")
+									figcaption con los<br> Ayuntamientos
+
+					div(class="clear")
+					
+					input(type="text" placeholder="o busca tu municipio")
+
+		div(class="greeting")
+			div(class="social")
+				a(href="")
+					figure
+						img(src="../images/MxM_ico_youtube-g-2x.png" class="ml6")
+						figcaption YouTube
+
+				a(href="")
+					figure
+						img(src="../images/MxM_ico_facebook-g-2x.png" class="ml")
+						figcaption Facebook
+
+				a(href="")
+					figure
+						img(src="../images/MxM_ico_twitter-g-2x.png" class="ml5")
+						figcaption Twitter
+			span Saludo del Presidente
+
+	div(id="secondHome")
+		div(class="container")
+			div(class="row")
+				div(class="col-sm-12 col-md-12")
+					img(src="../images/MxM_pres-2x.png" class="presidentImage" width="298" height="360")
+					span(class="title") Saludo del Presidente
+					h2 4 años con la provincia</br> de Sevilla
+					h3 Fernando Rodríguez Villalobos
+					p Introducción o párrafo destacado inicial sed in mi ultrices, fermentum lectus amet neque nec dapibus. Praesent elementum felis et sapien lobortis, at  dictum nisi mattis. Pellentesque lectus sapien, tincidunt ut luctus ultricies, ultrices ac enim. Donec vel tempus lorem, viverra lobortis sapien. Nullam convallis sit amet felis sit amet aliquam.
+					p 'Más con Menos' quizá sea la frase que mejor resume estos cuatro años de trabajo en la Diputación.
+
+				
+			div(class="row")
+				div(class="col-sm-9 col-md-9")
+					p Menos porque, si miramos nuestra capacidad real de gasto no financiero, ésta se ha visto reducida en un 26%, con objeto de cumplir con la ley de estabilidad presupuestaria durante el mandato que ahora cerramos.
+					p <strong>Y aún así, hemos hecho Más.</strong> Más porque hemos sido capaces de aumentar la inversión en gasto social en un 4% desde el inicio de mandato y, en el capítulo de obras, el año pasado fuimos capaces de invertir un 64% más que en el primer ejercicio de este cuatrienio.
+
+			div(class="row")
+				div(class="col-sm-12 col-md-12")
+					div(class="important")
+						div(class="separator")
+						p la Diputación ha sido capaz de movilizar 552 millones de € para mejorar el día a día de los minicipios sevillanos
+						div(class="separator")
+					p En definitiva, durante este mandato municipal, la Diputación de Sevilla ha sido capaz de movilizar un monto total de 552 millones de euros, en inversiones y coberturas sociales, para mejorar el día a día de los municipios sevillanos.
+					p Una cantidad a la que, en esta ocasión, le sumamos los 54 millones en medidas de liquidez a coste cero para los Ayuntamientos, al impedir la Ley de Estabilidad el uso de esos recursos en gastos no financieros. Es decir, que en inversiones y liquidez en clave municipal, han sido 606 millones de euros los movilizados desde la Diputación a los pueblos de la provincia de Sevilla.  
+
+			div(class="row")
+				div(class="col-sm-9 col-md-9")
+					p En este balance de mandato desde la Diputación de Sevilla, quiero agradecer la entrega y el trabajo a todos los que, de una u otra forma, habéis hecho posible que esta provincia siga siendo el sitio preferido para los que la habitan.
+	block js
+		script.
+			new Home().onReady();
+						
+
+
+
