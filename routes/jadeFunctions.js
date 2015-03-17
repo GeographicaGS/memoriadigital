@@ -7,18 +7,31 @@ function toFixed (number, precision) {
 function parseNumber(number) {
    number = toFixed(number,2);
    x = number.toString().split(".");
-   if(x.length > 0){
-	number = parseInt(x[0]).toLocaleString().replace(/,/g, '.');
-   }
-   if(x.length > 1){
-   	number += "," + x[1];
-   	if(x[1].length < 2){
-   		number += "0";
-   	}
-   }else{
-   	number += ",00";
-   }
-   return number;
+   // if(x.length > 0){
+	  //  number = parseInt(x[0]).toLocaleString().replace(/,/g, '.');
+   // }
+   // if(x.length > 1){
+   // 	number += "," + x[1];
+   // 	if(x[1].length < 2){
+   // 		number += "0";
+   // 	}
+   // }else{
+   // 	number += ",00";
+   // }
+   // return number;
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x[0])) {
+        x[0] = x[0].replace(rgx, '$1' + '.' + '$2');
+    }
+    if(x.length > 1){
+      x[0] += "," + x[1];
+      if(x[1].length < 2){
+        x[0] += "0";
+      }
+    }else{
+      x[0] += ",00";
+    }
+    return x[0];
 }
 
 function init(request, response, next) {
