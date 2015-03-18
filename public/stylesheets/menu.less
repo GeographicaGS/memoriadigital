@@ -13,12 +13,13 @@
 			list-style-type: none;
 			margin-left: 25px;
 
-			a{
+			a, span{
 				font-size: 13px;
 				color: #fff;
 				border-bottom: 1px solid #68d5bc;
 				font-weight: 600;
 				line-height: 88px;
+				cursor: pointer;
 			}
 		}
 	}
@@ -46,4 +47,94 @@
 				line-height: 12px;
 			}
 		}
+}
+
+.subMenu{
+	width: 260px;
+	background-color: #fff;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 70px;
+	border-radius: 3px;
+	box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.2);
+	pointer-events: none;
+	opacity: 0;
+	-webkit-transition: opacity .5s;
+	-moz-transition: opacity .5s;
+	-ms-transition: opacity .5s;
+	-o-transition: opacity .5s;
+	transition: opacity .5s;
+
+	&.active{
+		pointer-events: initial;
+		opacity: 1;
+		-webkit-transition: opacity .5s;
+        -moz-transition: opacity .5s;
+        -ms-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s;
+	}
+
+	.separator{
+		background-color: #bebdbd;
+		width: 45px;
+		height: 2px;
+		 margin-top: 46px;
+		 margin-left: 16px;
+		&:after, &:before{
+			content: '';
+			width: 10px;
+			height: 10px;
+			border-radius: 100%;
+			border: 2px solid #bebdbd;
+			display: block;
+		}
+		&:after{
+			  position: relative;
+			  left: 100%;
+			  bottom: 14px;
+		}
+		&:before{
+			position: relative;
+			bottom: 4px;
+			right: 10px;
+		}
+	}
+
+	div{
+		float:left;
+	}
+	.people, .towns{
+		figure{
+			figcaption{
+				margin-top: -30px;
+				font-size: 13px;
+				color:#39ae99;
+				line-height: 14px;
+			}
+		}
+	}
+
+	.people{
+		margin-left: 35px;
+		margin-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.towns{
+		margin-top: 20px;
+		margin-left: 0;
+	}
+
+	.arrow-up {
+		width: 0; 
+		height: 0; 
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid #fff;
+		position: absolute;
+		left: 120px;
+		top: -10px;
+	}
 }

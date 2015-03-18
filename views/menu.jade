@@ -2,13 +2,15 @@ div(id="menu")
 	nav
 		li
 			a(href="/") INICIO
-		li
-			a(href="") PROGRAMAS
+		li(class="programs")
+			span PROGRAMAS
+			include subMenu.jade
+
 		li
 			a(href="/municipios") MUNICIPIOS
 		li
 			a(href="") VIDEOS
-	a(href="" class="home")
+	a(href="/" class="home")
 		img(src="../images/MxM_logos64-2x.png" width="138" height="64")
 	div(class="social")
 			a(href="")

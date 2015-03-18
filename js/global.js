@@ -3,7 +3,18 @@ function Global(){
 }
 
 Global.prototype.onReady = function(){
+
+    $("nav .programs").mouseenter(function(){
+        $("nav .programs .subMenu").addClass('active');
+    });
+    
+    $("nav .programs").mouseleave(function(){
+        $("nav .programs .subMenu").removeClass('active');
+    });
+
+
 	$('.searcher').autocomplete({
+		minLength: 3,
         source: function(req,res) {
             $.ajax({
                 url: "/townsName/" + req.term,

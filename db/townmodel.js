@@ -13,7 +13,7 @@ TownModel.prototype.getTowns = function(callback){
 };
 
 TownModel.prototype.getTown = function(id,callback){
-	BaseModel.query(callback, 'select total, etiqueta, descripcion, heraldica, lema from data.municipios inner join data.programas on cod_ine=id where cod_ine=$1', [id]);
+	BaseModel.query(callback, 'select total, etiqueta, descripcion, heraldica, lema, total_calidad_vida as totalcalidad, aguas_residuos as aguas, espacios_verdes_naturaleza as verde, energia_alumbrado as energia, plan_bomberos as bomberos, plan_cohesion_social as cohesion, plan_urgencia_municipal as urgencia, total_desarrollo_personal as totalpersonal, infraestructuras_deportivas as deportivas, planes_ciudadania as ciudadania, planes_juventud as juventud, planes_culturales as culturales, programas_planes_deportivos as deportivos, total_empleo as total_empleo, fondos_reintegrables as reintegrables, feder as feder, proempleo as proempleo, turismo as turismo, conoce_la_provincia as conoce, turismo_promocion_marketing as marketing, total_mejorando_municipio as total_mejorando_municipio, programas_provinciales_plurianuales as plurianuales, pfoea as pfoea, supera as supera, sevilla as sevilla from data.municipios inner join data.programas on cod_ine=id inner join data.planes p on cod_ine=p.id where cod_ine=$1', [id]);
 };
 
 TownModel.prototype.getPeoplePlanData = function(id,callback){

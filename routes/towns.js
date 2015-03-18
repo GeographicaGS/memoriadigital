@@ -25,7 +25,9 @@ router.get('/municipios/:id', function(req, res) {
 	TownModel.getTown(req.params.id, function(err,data){
 		data[0].total = jadeFunctions.parseNumber(data[0].total);
 		res.render('town',{
-			town:data[0]
+			town:data[0],
+			people:data[0],
+			towns:data[0]
     	});
 	});
 });

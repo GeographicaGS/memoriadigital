@@ -17,6 +17,7 @@
 		line-height: 72px;
 		font-weight: 500;
 		text-transform: uppercase;
+		padding-left: 150px;
 	}
 
 	h2{
@@ -25,6 +26,8 @@
 		font-weight: 400;
 		line-height: 36px;
 		margin-top: 10px;
+		padding-left: 150px;
+		text-transform: uppercase;
 	}
 
 	h3{
@@ -33,6 +36,7 @@
 		line-height: 30px;
 		font-weight: 300;
 		margin-top: 48px;
+		max-width: ~"calc(100% - 318px)";
 	}
 	
 	.box{
@@ -52,8 +56,9 @@
 		border-radius: 100%;
 		border:1px solid #e7e7e7;
 		background-color: #fff;
-		float: left;
-		margin-right: 50px;
+		// float: left;
+		// margin-right: 50px;
+		position: absolute;
 		img{
 			display: block;
   			margin: 0 auto;
@@ -63,7 +68,7 @@
 	}
 	.chartSection{
 		margin-top: 68px;
-		margin-bottom: 190px;
+		// margin-bottom: 190px;
 		.filter{
 			overflow: auto;
 			span{
@@ -95,6 +100,7 @@
 		}
 		.legend{
 			margin-top: 40px;
+			margin-bottom: 50px;
 			h4{
 				font-family: museo_slab500;
 				font-size: 30px;
@@ -342,5 +348,16 @@
 			text-align: center;
 			padding-right: 20px;
 		}
+	}
+	#tablePeople, #tableTown, #tableProgram{
+		display: none;
+		margin-bottom: 190px;
+		
+		&.active{
+			display: block;
+		}
+	}
+	.tableHeader{
+		margin-top: 0px;
 	}
 }

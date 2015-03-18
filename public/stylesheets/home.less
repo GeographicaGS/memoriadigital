@@ -172,11 +172,33 @@
 			list-style-type: none;
 			margin-left: 25px;
 
-			a{
+			a, span{
 				font-size: 13px;
 				color: #39ae99;
 				border-bottom: 1px solid #68d5bc;
 				font-weight: 600;
+				cursor: pointer;
+			}
+		}
+		.programs{
+			height: 50px;
+		}
+
+		.subMenu{
+			top: 40px;
+  			left: 56px;
+			.people, .towns{
+				figure{
+					text-align: center;
+					figcaption{
+						margin-top: 0px;
+						text-align: center;
+					}
+				}
+			}
+
+			.towns{
+				margin-left: -3px;
 			}
 		}
 	}
@@ -198,6 +220,7 @@
 			}
 		}
 		.selector{
+			display: -webkit-inline-flex;
 			display: inline-flex;
 			margin-top: 15px;
 			h2{

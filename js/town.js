@@ -18,17 +18,21 @@ Town.prototype.onReady = function(){
 		$(".legend").removeClass("active")
 		var peopleFilter = $(".filter .peopleFilter")
 		var townFilter = $(".filter .townFilter")
+		$("#tablePeople, #tableTown, #tableProgram").removeClass("active");
 		if(peopleFilter.hasClass("active") && townFilter.hasClass("active")){
 			drawChartProgram(options);
-			$(".programLegend").addClass("active")
+			$(".programLegend").addClass("active");
+			$("#tableProgram").addClass("active");
 
 		}else if(peopleFilter.hasClass("active")){
 			drawChartPeople(options);
-			$(".peopleLegend").addClass("active")
+			$(".peopleLegend").addClass("active");
+			$("#tablePeople").addClass("active");
 
 		}else if(townFilter.hasClass("active")){
 			drawChartTown(options);
-			$(".townLegend").addClass("active")
+			$(".townLegend").addClass("active");
+			$("#tableTown").addClass("active");
 		}else{
 			$("#chart").children().remove();
 			chart = null;

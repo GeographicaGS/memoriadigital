@@ -13,7 +13,7 @@ router.get('/con-las-personas', function(req, res) {
 
 });
 
-router.get('/con-los-municipios', function(req, res) {
+router.get('/con-los-ayuntamientos', function(req, res) {
 	ProgramModel.getTowns(function(err,data){
 		res.render('programs',{
 			titleH1:"Con los Ayuntamientos",

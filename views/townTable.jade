@@ -1,0 +1,86 @@
+div(class="row tableHeader")
+	div(class="col-sm-3 col-md-3")
+		span <strong>SUBPROGRAMAS</strong>
+
+	div(class="col-sm-6 col-md-6")
+		span PLANES
+
+	div(class="col-sm-3 col-md-3 frigh")
+		span INVERSIÓN DE DIPUTACIÓN €
+
+div(class="row subprogram")
+	div(class="col-sm-3 col-md-3")
+		span Fondos Reintegrables
+	div(class="col-sm-9 col-md-9")
+		span()= parseNumber(towns.reintegrables)
+
+div(class="row lastRow")
+	div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+		span Fondos Reintegrables
+		span()= parseNumber(towns.reintegrables)
+
+div(class="row subprogram")
+	div(class="col-sm-3 col-md-3")
+		span Con el Empleo
+	div(class="col-sm-9 col-md-9")
+		span()= parseNumber(towns.total_empleo)
+
+div(class="row")
+	div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+		span FEDER
+		span()= parseNumber(towns.feder)
+
+div(class="row")
+	div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+		span ProEmpleo III y IV
+		span()= parseNumber(towns.proempleo)
+
+div(class="row")
+	div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+		span Turismo
+		span()= parseNumber(towns.turismo)
+
+div(class="row")
+	div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+		span Conoce la Provincia
+		span()= parseNumber(towns.conoce)
+
+div(class="row lastRow")
+	div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+		span Turismo Promoción y Marketing
+		span()= parseNumber(towns.marketing)
+
+div(class="row subprogram")
+	div(class="col-sm-3 col-md-3")
+		span Mejorando el Municipio
+	div(class="col-sm-9 col-md-9")
+		span()= parseNumber(towns.total_mejorando_municipio)
+
+div(class="row")
+	div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+		span Programas Provinciales Plurianuales
+		span()= parseNumber(towns.plurianuales)
+
+div(class="row")
+	div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+		span Programa de Fomento de Empleo Agrario y Rural
+		span()= parseNumber(towns.pfoea)
+
+div(class="row")
+	div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+		span Supera
+		span()= parseNumber(towns.supera)
+
+div(class="row lastRow")
+	div(class="col-md-offset-3 col-sm-offset-3 col-sm-9 col-md-9 data")
+		span Viviendas y Colegios (Sevilla Activa)
+		span()= parseNumber(towns.sevilla)
+
+div(class="row result")
+	div(class="col-sm-12 col-md-12")
+		span Con los Ayuntamientos
+		span()= parseNumber(towns.total_empleo + towns.reintegrables + towns.total_mejorando_municipio)
+
+div(class="row")
+	div(class="col-sm-12 col-md-12")
+		span(class="note") Los datos incluyen inversiones de adjudicación comarcal que tienen efecto directo en cada municipio de la zona.
