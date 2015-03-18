@@ -44,7 +44,7 @@ Town.prototype.onReady = function(){
 }
 
 function drawChartPeople(options){
-	options["colors"] = ['#5da5da', '#32a260', '#f9a339', '#f25854', '#b2912f', '#b276b3','#4584b3', '#cccc33', '#d785aa', '#404d40', '#404d40'];
+	options["colors"] = ['#5da5da', '#32a260', '#f9a339', '#f25854', '#b2912f', '#b276b3','#4584b3', '#cccc33', '#f17cb0', '#404d40', '#00802a'];
 	$.ajax({
     	url: '/peoplePlan/' + document.URL.substr(document.URL.lastIndexOf('/') + 1),
     	dataType: 'json',
@@ -92,11 +92,12 @@ function drawChart(response,options){
 		total += v;
 	});
 	
-	var aux = {};
-	aux[pos] = {offset: 0.1};
-	options["slices"] = aux;
+	// var aux = {};
+	// aux[pos] = {offset: 0.1};
+	// options["slices"] = aux;
 	var data = google.visualization.arrayToDataTable(data);
-	var formatter = new google.visualization.NumberFormat({pattern: '###,###.## €'});
+	// var formatter = new google.visualization.NumberFormat({pattern: '###,###.## €'});
+	var formatter = new google.visualization.NumberFormat({pattern: '###,### €'});
 	for(var z=0; z<data.getNumberOfColumns(); z++){
 		formatter.format(data, z); 
 	}

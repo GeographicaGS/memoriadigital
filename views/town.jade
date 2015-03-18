@@ -10,9 +10,9 @@ block content
 							span INVERSIÓN DE DIPUTACIÓN</br>
 							span(class="anio") 2011-2015
 							div(class="separator")
-							span()= town.total + " €"
+							span()= town.total.substring(0,town.total.indexOf(',')) + " €"
 							span(class="total")= "Total en " + town.etiqueta
-						input(type="text" placeholder="busca tu municipio")
+						input(type="text" class="searcher" placeholder="busca tu municipio")
 					div(class="mb20")
 						span(class="title") Municipios
 					div(class="heraldica")
@@ -33,7 +33,7 @@ block content
 								h5()= "en " + town.etiqueta
 
 								h6 Con la calidad de vida
-								span(class="color1") Plan/Programa/Medidas: Agua y Residuos
+								span(class="color1") Agua y Residuos
 								span(class="color2") Espacios Verdes y Naturaleza
 								span(class="color3") Energía y Alumbrado
 								span(class="color4") Plan de Bomberos
@@ -49,7 +49,7 @@ block content
 								span(class="color11") Programas y Planes Deportivos
 
 							div(class="legend townLegend")
-								h4 Con los Municipios
+								h4 Con los Ayuntamientos
 								h5()= "en " + town.etiqueta
 								
 								h6 Fondos Reintegrables

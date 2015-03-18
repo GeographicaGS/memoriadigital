@@ -34,10 +34,22 @@ function parseNumber(number) {
     return x[0];
 }
 
+function replaceAccents(s) {
+    var r = s.toLowerCase();
+    non_asciis = {'a': '[àáâãäå]', 'ae': 'æ', 'c': 'ç', 'e': '[èéêë]', 'i': '[ìíîï]', 'n': 'ñ', 'o': '[òóôõö]', 'oe': 'œ', 'u': '[ùúûűü]', 'y': '[ýÿ]'};
+    for (i in non_asciis) { r = r.replace(new RegExp(non_asciis[i], 'g'), i); }
+    return r;
+}
+
+
 function init(request, response, next) {
 
     response.locals.parseNumber = function(){
         return parseNumber.apply(response,arguments);
+    };
+
+    response.locals.replaceAccents = function(){
+        return replaceAccents.apply(response,arguments);
     };
 
     if (typeof next === 'function') {
@@ -46,4 +58,5 @@ function init(request, response, next) {
 };
 
 module.exports.parseNumber = parseNumber;
+module.exports.replaceAccents = replaceAccents;
 module.exports.init = init;

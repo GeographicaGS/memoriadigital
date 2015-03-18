@@ -8,7 +8,7 @@ router.get('/municipios', function(req, res) {
 	TownModel.getTowns(function(err,data){
 		var result = {};
 		for(var i=0; i<data.length; i++){
-			var character = data[i].etiqueta.charAt(0);
+			var character = jadeFunctions.replaceAccents(data[i].etiqueta.charAt(0)).toUpperCase();
 			if(!result[character]){
 				result[character] = new Array(data[i]);
 			}else{
@@ -48,6 +48,13 @@ router.get('/program/:id', function(req, res) {
 	TownModel.getProgramsData(req.params.id,function(err,data){
 		res.setHeader('Content-Type', 'application/json');
 		res.end(JSON.stringify({result: data[0]}));
+	});
+});
+
+router.get('/townsName/:name', function(req, res) {
+	TownModel.getTownsNames(req.params.name,function(err,data){
+		res.setHeader('Content-Type', 'application/json');
+		res.end(JSON.stringify(data));
 	});
 });
 
