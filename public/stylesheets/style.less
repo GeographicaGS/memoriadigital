@@ -1,5 +1,5 @@
 @import 'reset';
-@import 'base';
+@import 'base'; 
 
 @font-face {
     font-family: 'museo_slab500';
@@ -35,6 +35,12 @@
 body {
 	font: 18px "Open Sans", sans-serif;
 	background-color: #f2f2f2;	
+
+  h1{
+    @media (max-width:992px) {
+        font-size: 38px !important;
+    }
+  }
 
     .title{
         font-size: 14px;
@@ -79,6 +85,25 @@ body {
             color:#57575f;
             font-weight: 300;
         }
+    }
+
+    .errorInput{
+      visibility: hidden;
+      text-align: center;
+      span{
+        display: block;
+        font-size: 18px;
+        color: #ff0000;
+        margin-top: 20px;
+        line-height: 24px;
+        font-weight: 300;
+      }
+      a{
+        font-size: 13px;
+        color: #39ae99;
+        border-bottom: 1px solid #68d5bc;
+        text-transform: uppercase;
+      }
     }
 
     .box{
@@ -171,11 +196,36 @@ body {
       border-bottom: 2px solid #39ae99;
       background-color: #fff;
       font-family: museo_slab500;
+
+      &.people{
+        span{
+          &:before{
+            background-image: url("../images/MxM_ico_personas-s-2x.png");
+          }
+        }
+      }
+
+      &.town{
+        span{
+          &:before{
+            background-image: url("../images/MxM_ico_ayuntamientos-s-2x.png");
+          }
+        }
+      }
+
+      &.total{
+        span{
+          &:before{
+            width: 0 !important;
+          }
+        }
+      }
+
       span{
         &:first-of-type{
           &:before{
             content: "";
-            background-image: url("../images/MxM_ico_personas-s-2x.png");
+            // background-image: url("../images/MxM_ico_personas-s-2x.png");
             width: 28px;
             height: 28px;
             background-size: 28px 28px;

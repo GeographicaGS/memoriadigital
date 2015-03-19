@@ -26,8 +26,6 @@ db.init(function(err){
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'jade');
 
-    // uncomment after placing your favicon in /public
-    //app.use(favicon(__dirname + '/public/favicon.ico'));
     app.use(logger('dev'));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
@@ -61,6 +59,8 @@ db.init(function(err){
     app.use(express.static(path.join(__dirname, 'public')));
 
     app.use(jadeFunctions.init);
+
+    app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
 
     app.use('/', routes);
     app.use('/', programs);

@@ -21,6 +21,11 @@ Global.prototype.onReady = function(){
                 dataType: "json",
                 type: "GET",
                 success: function(data) {
+                    if(data.length == 0){
+                        $(".errorInput").css({"visibility":"initial"});
+                    }else{
+                        $(".errorInput").css({"visibility":"hidden"});
+                    }
            			res($.map(data, function(item) {
                         return {
                             label: item.label,

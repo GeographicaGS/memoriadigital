@@ -5,6 +5,21 @@ function Town(){
 
 Town.prototype.onReady = function(){
 
+	//Elimino las filas con ceros
+	var values = $("#tablePeople span, #tableTown span, #tableProgram span");
+	for(var i=0; i<values.length; i++){
+		var value =  values[i];
+	    if($(value).text() == "0,00"){
+	    	if($(value).closest(".row").hasClass("lastRow")){
+	    		$(value).closest(".row").prev().addClass("lastRow");
+	    	}
+	    	if($(value).prev().text() != ""){
+	    		$(".legend span:contains(" + $(value).prev().text() + ")").remove();
+	    	}
+	    	$(value).closest(".row").remove();
+	    }
+	}
+
 	var options = {
 			          pieHole: 0.7,
 			          chartArea: {'width': '85%', 'height': '85%', 'top':'0'},
@@ -16,6 +31,7 @@ Town.prototype.onReady = function(){
 	$(".filter .peopleFilter, .filter .townFilter").unbind().click(function(){
 		$(this).toggleClass("active");
 		$(".legend").removeClass("active")
+		$(".notFilter").hide();
 		var peopleFilter = $(".filter .peopleFilter")
 		var townFilter = $(".filter .townFilter")
 		$("#tablePeople, #tableTown, #tableProgram").removeClass("active");
@@ -38,6 +54,7 @@ Town.prototype.onReady = function(){
 			chart = null;
 			$(".greeBox").hide();
 			$("#ceterChartText").hide();
+			$(".notFilter").show();
 		}
 	});
 
@@ -110,6 +127,8 @@ function drawChart(response,options){
 	}
 	
 	chart.draw(data, options);
+	chart.setSelection([{'row': pos}]);
+
 	$("#greeBoxPlan").text(data.getValue(pos,0));
 	var inversion = data.getValue(pos,1).toString().split(".")[0];
 	$("#greeBoxValue").text(addCommas(inversion) + " €");

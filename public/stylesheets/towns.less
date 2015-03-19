@@ -33,6 +33,12 @@
 			.border{
 				border-bottom: 1px solid #bebdbd;
 				overflow: auto;
+				&:hover{
+					background-color: #39ae99;
+					span{
+						color: #fff;
+					}
+				}
 			}
 			span{
 				color:#3d3b3c;
@@ -57,5 +63,16 @@
 		display: block;
 		margin-top:63px;
 		margin-bottom: 168px;
+	}
+
+	.separator{
+		background-color: #bebdbd;
+		height: 100%;
+		width: 1px;
+		position: absolute;
+		left: 50%;
+		@media (max-width:992px) {
+        	display: none;
+    	}
 	}
 }

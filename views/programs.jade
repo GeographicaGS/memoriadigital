@@ -17,6 +17,9 @@ block content
 								- total = parseNumber(towns.total_empleo + towns.reintegrables + towns.total_mejorando_municipio)
 							span()= total.substring(0,total.indexOf(',')) + " €"
 						input(type="text" class="searcher" placeholder="busca tu municipio")
+						div(class="errorInput")
+							span no se obtuvo ningún resultado
+							a(href="/municipios") Consulta la Lista de Municipios
 
 					span(class="title") Programa
 					h1()= titleH1

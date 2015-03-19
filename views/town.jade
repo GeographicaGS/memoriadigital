@@ -12,7 +12,12 @@ block content
 							div(class="separator")
 							span()= town.total.substring(0,town.total.indexOf(',')) + " €"
 							span(class="total")= "Total en " + town.etiqueta
+					
 						input(type="text" class="searcher" placeholder="busca tu municipio")
+						div(class="errorInput")
+							span no se obtuvo ningún resultado
+							a(href="/municipios") Consulta la Lista de Municipios
+					
 					div(class="mb20")
 						span(class="title") Municipios
 					div(class="heraldica")
@@ -29,6 +34,9 @@ block content
 							div(class="townFilter")
 						
 						div(class="col-sm-4 col-md-4")
+							
+							p(class="notFilter") Seleccione un programa
+
 							div(class="legend peopleLegend active")
 								h4 Con las Personas
 								h5()= "en " + town.etiqueta
@@ -250,7 +258,7 @@ block content
 								span Viviendas y Colegios (Sevilla Activa)
 								span()= parseNumber(towns.sevilla)
 
-						div(class="row result")
+						div(class="row result total")
 							div(class="col-sm-12 col-md-12")
 								span Total
 								span()= parseNumber(towns.total_empleo + towns.reintegrables + towns.total_mejorando_municipio + people.totalcalidad + people.totalpersonal)
