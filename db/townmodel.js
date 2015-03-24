@@ -18,7 +18,7 @@ TownModel.prototype.getTown = function(id,callback){
 
 TownModel.prototype.getPeoplePlanData = function(id,callback){
 
-	BaseModel.query(callback, 'select aguas_residuos as "Agua y Residuos", espacios_verdes_naturaleza as "Espacios Verdes y Naturaleza", energia_alumbrado as "Energía y Alumbrado", plan_bomberos as "Plan de Bomberos", plan_cohesion_social as "Plan Provincial de Cohesión Territorial", plan_urgencia_municipal as "Plan de Urgencia Municipal 2011-2014", infraestructuras_deportivas as "Infraestructuras Deportivas", planes_ciudadania as "Planes de Ciudadanía", planes_juventud as "Planes de Juventud", planes_culturales as "Planes Culturales", programas_planes_deportivos as "Programas y Planes Deportivos" from data.planes where id=$1', [id]);
+	BaseModel.query(callback, 'select aguas_residuos as "Agua y Residuos", espacios_verdes_naturaleza as "Espacios Verdes y Naturaleza", energia_alumbrado as "Energía y Alumbrado", plan_bomberos as "Plan de Bomberos", plan_cohesion_social as "Plan provincial de cohesión social", plan_urgencia_municipal as "Plan de Urgencia Municipal 2011-2014", infraestructuras_deportivas as "Infraestructuras Deportivas", planes_ciudadania as "Planes de Ciudadanía", planes_juventud as "Planes de Juventud", planes_culturales as "Planes Culturales", programas_planes_deportivos as "Programas y Planes Deportivos" from data.planes where id=$1', [id]);
 };
 
 TownModel.prototype.getTownPlanData = function(id,callback){
