@@ -8,11 +8,11 @@ function BaseModel() {
 BaseModel.prototype.query = function(callback,query,parameters){
 	pg.connect(this._conString, function(err, db, done) {
 		db.query(query,parameters, function(err, result) {
-			// done();
+			done();
 			if(err) {
 	      		return console.error('error running query', err);
 	    	}
-	    	db.end();
+	    	// db.end();
 			callback(err,result.rows);
 		});
 	});
